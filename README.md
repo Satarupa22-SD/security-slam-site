@@ -59,6 +59,8 @@ Article content in Markdown.
 
 Library filenames determine their slugs (for example, `src/content/library/cleaner.md` is available at `/library/cleaner`). The `index.md` file supplies the library landing-page content. A `badge` field marks a badge page; `weight` controls its display order. Articles can also use fields such as `image`, `author`, `videoUrl`, and `aliases`.
 
+Set `youtubeId` in `src/content/slam26/index.md` to embed a YouTube video at the top of `/slam26`.
+
 The content loaders are in `src/lib/content.ts`. Route-specific pages read their Markdown data there and render it through the shared document components in `src/components/`.
 
 ## Styling and shared data
