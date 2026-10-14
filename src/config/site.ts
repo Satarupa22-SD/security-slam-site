@@ -64,7 +64,7 @@ export const siteConfig: SiteConfig = {
   siteName: "Security Slam",
   tagline: "October 5 – November 6, 2026",
   preregistrationUrl: "",
-  participatingProjectsDefaultTab: "leaderboard",
+  participatingProjectsDefaultTab: "projects",
 
   banner: {
     enabled: false,
@@ -94,7 +94,9 @@ export const siteConfig: SiteConfig = {
   // Header nav. The six objectives are one click from every page (Spring feedback: hard to find).
   customNavLinks: [
     {
-      path: "/library",
+      // Dropdown only: Header renders items with children as a button, so this
+      // path is an id, not a route. Kept distinct from the Library link below.
+      path: "#objectives",
       label: "Objectives",
       children: [
         { path: "/library/cleaner", label: "Cleaner" },
@@ -105,6 +107,7 @@ export const siteConfig: SiteConfig = {
         { path: "/library/cra-readiness", label: "CRA Readiness" }
       ]
     },
+    { path: "/library", label: "Library" },
     { path: "/slam26", label: "How it works" },
     { path: "/slam26/participating-projects", label: "Projects" },
     { path: "/slam26/register", label: "Register" },
@@ -116,8 +119,6 @@ export const siteConfig: SiteConfig = {
       path: "/slam26/submit-completion",
       title: "Submit Badge Completion",
       description: "This form is for project maintainers to report completion of Slam26 badges. This may be submitted multiple times to request personal badges for each contributor to the badge. The form should ONLY be submitted by maintainers; other results will be automatically ignored. Organizers will reach out to maintainers via email to confirm the submissions.",
-      formDisabled: true,
-      formDisabledMessage: "The Fall 2026 badge completion form is not open yet. Keep working on your badges and check back here during the Slam.",
       hubspot: {
         portalId: "243073831",
         formId: "5523a8f7-f60e-4ac9-8aed-225b6ebfd304",

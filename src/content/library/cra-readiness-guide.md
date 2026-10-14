@@ -28,7 +28,18 @@ Read more:
 
 Since there are no regulatory requirements for most open source projects, the term “CRA Readiness” in this guide is used only as a voluntary transparency indicator that may help users understand that the project follows recognized security and engineering practices. It is not a legal status, certification, or regulatory designation. It is a communication and transparency practice intended to support trust, security, and responsible downstream use.
 
-## How To Approach “CRA Readiness”
+Under the CRA, manufacturers placing products with digital elements on the EU market are required to exercise due diligence when integrating software components, including third-party and open source components, as part of ensuring that their products meet the applicable cybersecurity requirements.
+
+Open source maintainers are not responsible for performing this due diligence. This responsibility cannot be delegated upstream to open source maintainers or contributors, even when their software is used as part of a commercial product. However, voluntary transparency about project practices can make it easier for downstream users to perform their own legal responsibilities.
+
+Read more: 
+
+- [Cyber Resilience Act (CRA) Brief Guide for Open Source Software (OSS) Developers](https://best.openssf.org/CRA-Brief-Guide-for-OSS-Developers).  
+- [CRA Readiness Guide for Maintainers and Developers](https://policy.openssf.org/CRA/maintainers.html) 
+
+Since there are no regulatory requirements for most open source projects, the term “CRA Readiness” in this guide is used only as a voluntary transparency indicator that may help users understand that the project follows recognized security and engineering practices. It is not a legal status, certification, or regulatory designation. It is a communication and transparency practice intended to support trust, security, and responsible downstream use.
+
+# How To Approach “CRA Readiness”
 
 There is currently no “official” CRA Readiness certification or standard for open source projects. There are a number of efforts underway on how to approach CRA Readiness, including [OpenSSF Global Cyber Policy Working Group](https://github.com/ossf/wg-globalcyberpolicy)(GCP), [OpenSSF Orbit WG](https://github.com/ossf/wg-orbit), [Open Source Project Security Baseline (OSPS)](https://github.com/ossf/security-baseline)  and others.
 
@@ -45,11 +56,11 @@ The following simplified CRA Readiness checklist represents minimal voluntary pr
 | Licence File | Repository should contain a clear LICENSE or COPYING file. | It’s strongly recommended for open source projects to use one of the commonly used licences, e.g from  [OSI Approved Licenses catalogue](https://opensource.org/licenses). [Example](https://github.com/kubevirt/kubevirt?tab=Apache-2.0-1-ov-file) A clear license also helps prevent misunderstanding regarding liability and responsibility boundaries. | \[Link to your licence file\] |
 | OSPS | Achieve Open Source Project Security Baseline (OSPS) Level 1, at minimum. NOTE: If you implemented all the above, you most likely almost achieved OSPS L1 already. | More details at [baseline.openssf.org](https://baseline.openssf.org). | \[You can publish or link to a [OSPS checklist](https://baseline.openssf.org/versions/2025-10-10-checklist.md)\] |
 
-## How To Document “CRA Readiness”
+# How To Document “CRA Readiness”
 
 Ideally, the CRA Readiness needs to be documented in both human-readable and machine-readable formats. Such documentation is intended solely for transparency and communication, **not regulatory compliance**. Publicly sharing this information should allow your downstream consumers and government officials to gain answers to their questions without needing to interrupt the project team.
 
-### Human-readable (default option)
+## Human-readable (default option)
 
 Simply create a file in your repo that contains the table (checklist) above. Link this file from your `README.md` for easy navigation. To avoid any misunderstanding, include a clear disclaimer stating:
 
@@ -66,7 +77,7 @@ The above statement can be complemented with the additional legal references ([E
 
 Optionally, the good practice is to create a separate file ([Example of a CNCF project security self-assessment.md](https://github.com/cncf/toc/blob/e67e3e4e4396f131913cd226fc0fb0db04e7e67f/projects/k3s/self-assessment.md)) that compiles your project security posture, secure development processes, threat model and related details, where you can also add or link the Checklist Table above.
 
-### Machine-readable (advanced option)
+## Machine-readable (advanced option)
 
 Convert the checklist table above into machine-readable format and add it to overall description of your security posture, for example in a format of [security-insights.YAML](https://github.com/ossf/security-insights-spec)
 
